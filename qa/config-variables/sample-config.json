@@ -1,0 +1,6 @@
+{
+	"`CONFIG_CONN_NAME`": "projects/bap-emea-apigee-3/locations/europe-west4/connections/pubsubqa",
+	"`CONFIG_ENV`": "qa",
+	"`CONFIG_TOPIC`": "projects/bap-emea-apigee-3/topics/mytopic",
+	"`CONFIG_URL`": "https://httpbin.org/get"
+}
