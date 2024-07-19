@@ -4,7 +4,7 @@
 			"taskId": "2",
 			"task": "GenericConnectorTask",
 			"parameters": {
-				"connectionName": "pubsubqa"
+				"connectionName": "pubsub"
 			}
 		}
 	],
