@@ -58,10 +58,10 @@ steps:
       sed -i "s@TRIGGER_ID@$triggerId@g" ./tests/integration/demo.feature
       sed -i "s@ACCESS_TOKEN@$token@g" ./tests/integration/demo.feature
       sed -i "s@INTEGRATION_ENV@$env@g" ./tests/integration/demo.feature
-# - name: node:16
-#   id: "Functional Test"
-#   entrypoint: npm
-#   args: ['run', 'integration-test']
+- name: node:16
+  id: "Functional Test"
+  entrypoint: npm
+  args: ['run', 'integration-test']
 
 substitutions:
   _LOCATION: "europe-west4"
