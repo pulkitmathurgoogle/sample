@@ -9,6 +9,7 @@
 		}
 	],
 	"integration_overrides": {
+		"databasePersistencePolicy": "DATABASE_PERSISTENCE_POLICY_UNSPECIFIED",
 		"enableVariableMasking": false,
 		"cloudLoggingDetails": {
 			"cloudLoggingSeverity": "INFO",
