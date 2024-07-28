@@ -35,7 +35,7 @@ steps:
     - --env=${_BRANCH_NAME}
     # - $(cat /tmp/cmd)
 # - name: node:18
-- name: node
+- name: 'gcr.io/cloud-builders/npm'
   id: "Install Node Dependencies"
   entrypoint: npm
   args: ['install', '--silent', '--no-fund']
