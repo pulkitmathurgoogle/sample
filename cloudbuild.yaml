@@ -38,26 +38,26 @@ steps:
   id: "Install Node Dependencies"
   entrypoint: npm
   args: ['install', '--silent', '--no-fund']
-# - name: 'gcr.io/cloud-builders/gcloud'
-#   id: Setup test
-#   entrypoint: 'bash'
-#   args:
-#     - -c 
-#     - |
-#       export name=$(ls -A src | sed 's/\.json'$//)
-#       export basepath=/v1/projects/${PROJECT_ID}/locations/${_LOCATION}/integrations/${name}:execute
-#       export triggerId="api_trigger/${name}_API_1"
-#       export token=$(gcloud auth application-default print-access-token)
-#       export env=$BRANCH_NAME
-#       echo "env: " $env
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Setup test
+  entrypoint: 'bash'
+  args:
+    - -c 
+    - |
+      export name=$(ls -A src | sed 's/\.json'$//)
+      export basepath=/v1/projects/${PROJECT_ID}/locations/${_LOCATION}/integrations/${name}:execute
+      export triggerId="api_trigger/${name}_API_1"
+      export token=$(gcloud auth application-default print-access-token)
+      export env=$BRANCH_NAME
+      echo "env: " $env
 
-#       # update the files with the variables
-#       sed -i "s@INTEGRATION_HOST@$_BUILD_INTEGRATION_HOST@g" ./tests/integration/support/init.js
-#       sed -i "s@INTEGRATION_BASEPATH@$basepath@g" ./tests/integration/support/init.js
+      # update the files with the variables
+      sed -i "s@INTEGRATION_HOST@$_BUILD_INTEGRATION_HOST@g" ./tests/integration/support/init.js
+      sed -i "s@INTEGRATION_BASEPATH@$basepath@g" ./tests/integration/support/init.js
 
-#       sed -i "s@TRIGGER_ID@$triggerId@g" ./tests/integration/demo.feature
-#       sed -i "s@ACCESS_TOKEN@$token@g" ./tests/integration/demo.feature
-#       sed -i "s@INTEGRATION_ENV@$env@g" ./tests/integration/demo.feature
+      sed -i "s@TRIGGER_ID@$triggerId@g" ./tests/integration/demo.feature
+      sed -i "s@ACCESS_TOKEN@$token@g" ./tests/integration/demo.feature
+      sed -i "s@INTEGRATION_ENV@$env@g" ./tests/integration/demo.feature
 # - name: node:16
 #   id: "Functional Test"
 #   entrypoint: npm
