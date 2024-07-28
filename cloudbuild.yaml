@@ -34,10 +34,10 @@ steps:
     - --metadata-token
     - --env=${BRANCH_NAME}
     - $(cat /tmp/cmd)
-# - name: node:16
-#   id: "Install Node Dependencies"
-#   entrypoint: npm
-#   args: ['install', '--silent', '--no-fund']
+- name: node:16
+  id: "Install Node Dependencies"
+  entrypoint: npm
+  args: ['install', '--silent', '--no-fund']
 # - name: 'gcr.io/cloud-builders/gcloud'
 #   id: Setup test
 #   entrypoint: 'bash'
