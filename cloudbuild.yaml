@@ -34,7 +34,7 @@ steps:
     - --metadata-token
     - --env=${_BRANCH_NAME}
     # - $(cat /tmp/cmd)
-- name: node:16
+- name: node:18
   id: "Install Node Dependencies"
   entrypoint: npm
   args: ['install', '--silent', '--no-fund']
