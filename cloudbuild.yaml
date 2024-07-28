@@ -32,7 +32,7 @@ steps:
     - --reg=${_LOCATION}
     - --proj=${_DEPLOYMENT_PROJECT_ID}
     - --metadata-token
-    - --env=dev #${BRANCH_NAME}
+    - --env=${_BRANCH_NAME}
     # - $(cat /tmp/cmd)
 # - name: node:16
 #   id: "Install Node Dependencies"
@@ -68,6 +68,7 @@ substitutions:
   _BUILD_INTEGRATION_HOST: "${_LOCATION}-integrations.googleapis.com"
   _WAIT: "true"
   _DEPLOYMENT_PROJECT_ID: "bap-emea-apigee-11"
+  _BRANCH_NAME: "dev"
 
 options:
   logging: CLOUD_LOGGING_ONLY
