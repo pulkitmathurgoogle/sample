@@ -6,8 +6,8 @@
 	},
 	"configVariables": [
 		{
-			"key": "bap-emea-apigee-11",
-			"stringValue": "$PROJECT_ID$"
+			"key": "project_id",
+			"stringValue": "bap-emea-apigee-11"
 		},
 		{
 			"key": "topic_id",
