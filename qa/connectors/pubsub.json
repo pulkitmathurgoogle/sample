@@ -6,7 +6,7 @@
 	},
 	"configVariables": [
 		{
-			"key": "project_id",
+			"key": "bap-emea-apigee-3",
 			"stringValue": "$PROJECT_ID$"
 		},
 		{
@@ -15,6 +15,10 @@
 		}
 	],
 	"authConfig": {},
+	"nodeConfig": {
+		"minNodeCount": 2,
+		"maxNodeCount": 50
+	},
 	"logConfig": {},
 	"sslConfig": {
 		"privateServerCertificate": {},
